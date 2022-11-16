@@ -1,7 +1,18 @@
+import Navbar from "../Components/Navbar";
+import '../Assets/CSS/home.css';
+import Catergories from "../Components/Categories";
+import RecentActivity from "../Components/RecentActivity";
+
 function Home(){
     return (
         <div>
-            <h1>Hello World</h1>
+            <Navbar />
+            <div className="homeTop flex flex-col justify-center items-center">
+                <p className="text-[50px] font-semibold">Let's Explore Nearby</p>
+
+            </div>
+            <Catergories />
+            <RecentActivity />
         </div>
     )
 }

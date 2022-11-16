@@ -1,0 +1,5 @@
+.navBackground{
+    background: linear-gradient(180deg, #e7e3e3 113.33%, rgba(233, 233, 233, 0.2) 115.2%);
+    mix-blend-mode: hard-light;
+    box-shadow: 0px 4px 63px 20px rgba(255, 255, 255, 0.25);
+}
