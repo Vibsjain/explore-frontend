@@ -15,7 +15,7 @@ function Catergories(){
 
     return (
         <div data-aos="fade-down" className="flex flex-col flex-wrap justify-center items-center bg-[#EDEDED]">
-            <p className="text-[50px] font-semibold py-10 z-[1000]">Categories</p>
+            <p className="text-[45px] font-semibold py-10 z-[1000]">Categories</p>
             <div className='flex justify-evenly w-full'>
                 <CategoryCard symbol={cat1unfilled} name="Restaurant" />
                 <CategoryCard symbol={cat2unfilled} name="Coffee & Tea" />
