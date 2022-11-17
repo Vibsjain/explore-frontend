@@ -5,7 +5,7 @@
 
 .homeTop::before{
     content: "";
-    background-image: url('../Images/home-top.png');
+    background-image: url('../Images/homeTop.png');
     opacity: 0.3;
     background-repeat: no-repeat;
     background-size: cover;

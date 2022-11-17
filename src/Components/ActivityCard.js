@@ -1,17 +1,195 @@
-function ActivityCard(props){
+import React, { useState } from "react";
+import emptyStar from "../Assets/Images/emptyStar.png";
+import filledStar from "../Assets/Images/filledStar.png";
 
+function ActivityCard(props) {
     const image = props.userImage;
     const name = props.userName;
     const resImage = props.restImage;
     const resName = props.restName;
     const star = props.star;
     const review = props.review;
+    const [isExtended, setIsExtended] = useState(true);
+    return (
+        <div className="flex flex-col justify-center  sm:min-h-[50vh] min-h-[45vh] sm:w-[30rem] w-[20rem] sm:my-4 my-2 rounded-[3rem] bg-white shadow-xl p-4">
+            <div className="sm:m-4 m-2">
+                <div className="flex py-4 ">
+                    <img
+                        src={image}
+                        className="rounded-full sm:w-[4rem] sm:h-[4rem] w-[3.5rem] h-[3.5rem]"
+                    />{" "}
+                    <div className="flex flex-col justify-center mx-4">
+                        <h1 className="sm:text-[20px] text-[16px] text-[#3A3A3A] font-normal">
+                            {name}
+                        </h1>
+                        <h1 className="sm:text-[16px] text-[15px] text-[#6D6D6D]">
+                            Wrote a Review
+                        </h1>
+                    </div>
+                </div>
+                <div className="sm:my-4 my-2">
+                    <img
+                        src={resImage}
+                        className="w-full sm:h-48 h:36 rounded-[21px]"
+                    />
+                    <h1 className="my-4 font-bold text-[16px] text-[#3A3A3A]">
+                        {resName}
+                    </h1>
+                </div>
+                {(function () {
+                    if (star === 0) {
+                        return (
+                            <img
+                                src={emptyStar}
+                                className="w-[20px] h-[19px]"
+                            />
+                        );
+                    } else if (star === 1) {
+                        return (
+                            <div className="flex gap-2">
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                            </div>
+                        );
+                    } else if (star === 2) {
+                        return (
+                            <div className="flex gap-2">
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                            </div>
+                        );
+                    } else if (star === 3) {
+                        return (
+                            <div className="flex gap-2">
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                            </div>
+                        );
+                    } else if (star === 4) {
+                        return (
+                            <div className="flex gap-2">
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={emptyStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                            </div>
+                        );
+                    } else if (star === 5) {
+                        return (
+                            <div className="flex gap-2">
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                                <img
+                                    src={filledStar}
+                                    className="w-[20px] h-[19px]"
+                                />
+                            </div>
+                        );
+                    }
+                })()}
 
-    return(
-        <div className="flex flex-col justify-center items-center min-h-[50vh] rounded-xl bg-white shadow-xl p-4">
-            
+                {isExtended ? (
+                    <div>
+                        <h1 className="text-justify">{review.slice(0, 150)}</h1>
+                    </div>
+                ) : (
+                    <div>
+                        <h1 className="text-justify">{review}</h1>
+                    </div>
+                )}
+                <button
+                    className="text-[#0066FF]"
+                    onClick={() => setIsExtended(!isExtended)}
+                >
+                    {isExtended ? "Read More...." : "Read Less..."}
+                </button>
+            </div>
         </div>
-    )
+    );
 }
 
 export default ActivityCard;
