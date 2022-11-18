@@ -18,6 +18,7 @@ function ActivityCard(props) {
                     <img
                         src={image}
                         className="rounded-full sm:w-[4rem] sm:h-[4rem] w-[3.5rem] h-[3.5rem]"
+                        alt=""
                     />{" "}
                     <div className="flex flex-col justify-center mx-4">
                         <h1 className="sm:text-[20px] text-[16px] text-[#3A3A3A] font-normal">
@@ -32,6 +33,7 @@ function ActivityCard(props) {
                     <img
                         src={resImage}
                         className="w-full sm:h-48 h:36 rounded-[21px]"
+                        alt=""
                     />
                     <h1 className="my-4 font-bold text-[16px] text-[#3A3A3A]">
                         {resName}
@@ -45,6 +47,7 @@ function ActivityCard(props) {
                                 <img
                                     src={filledStar}
                                     className="w-[20px] h-[19px]"
+                                    alt=""
                                 />
                             );
                         } else {
@@ -52,6 +55,7 @@ function ActivityCard(props) {
                                 <img
                                     src={emptyStar}
                                     className="w-[20px] h-[19px]"
+                                    alt=""
                                 />
                             );
                         }
@@ -70,7 +74,7 @@ function ActivityCard(props) {
                     className="text-[#0066FF]"
                     onClick={() => setIsExtended(!isExtended)}
                 >
-                    {isExtended ? "Read More...." : "Read Less..."}
+                    {isExtended ? "Read More...." : "Read Less"}
                 </button>
             </div>
         </div>

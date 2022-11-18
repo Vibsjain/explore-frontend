@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="flex flex-col w-3/12  justify-evenly items-center py-4">
-                <img src={logo} className="w-[15rem] h-[15rem]" />
+                <img src={logo} className="w-[15rem] h-[15rem]" alt="" />
                 <div className="flex">
                     <h1 className="text-[20px] text-[#3A3A3A] font-medium">
                         Follow Us -{" "}
@@ -62,10 +62,12 @@ const Footer = () => {
                         <img
                             src={instagram}
                             className="w-[2rem] h-[2rem] ml-4"
+                            alt=""
                         />
-                        <img src={twitter} className="w-[2rem] h-[2rem] ml-4" />
+                        <img src={twitter} className="w-[2rem] h-[2rem] ml-4" alt="" />
                         <img
                             src={linkedin}
+                            alt=""
                             className="w-[2rem] h-[2rem] ml-4"
                         />
                     </div>
